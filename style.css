@@ -1,0 +1,340 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #211e1a;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.topBar {
+    background-color: #171512;
+    padding: 20px 0;
+}
+
+.navContainer {
+    width: 86%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    text-decoration: none;
+    font-size: 34px;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo > span:last-child {
+    font-weight: bold;
+}
+
+.logoIcon {
+    font-size: 48px;
+    color: #dddddd;
+}
+
+.orange {
+    color: #ff681e;
+}
+
+.navRight {
+    display: flex;
+    align-items: center;
+    gap: 38px;
+}
+
+.navRight a {
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    padding: 12px 16px;
+}
+
+.navRight .homeButton {
+    background-color: #c92d32;
+    border-radius: 4px;
+}
+
+.navRight input {
+    width: 140px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #aaa;
+}
+
+.topSearchButton {
+    display: none;
+}
+
+.mainContainer {
+    width: 86%;
+    margin: auto;
+}
+
+.welcome {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding: 55px 0 45px;
+}
+
+.welcomeText {
+    flex: 1;
+}
+
+.welcome h1 {
+    font-size: 42px;
+    margin: 0 0 14px;
+}
+
+.welcome p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 3px 0;
+}
+
+.welcome .tagline {
+    font-size: 21px;
+    margin-top: 12px;
+}
+
+.sideFood {
+    width: 180px;
+    font-size: 100px;
+}
+
+.welcomeButtons {
+    margin: 22px 0;
+}
+
+.welcomeButtons a {
+    display: inline-block;
+    padding: 13px 25px;
+    margin: 0 8px;
+    border-radius: 9px;
+    text-decoration: none;
+    color: white;
+}
+
+.freeButton {
+    background-color: #08a52d;
+}
+
+.premiumButton {
+    background-color: #ffbd32;
+}
+
+.welcomeText .supportText {
+    margin-top: 20px;
+}
+
+hr {
+    border: 0;
+    border-top: 3px solid #eeeeee;
+    margin: 10px 0 35px;
+}
+
+.searchSection {
+    text-align: center;
+    padding: 0 0 25px;
+}
+
+.searchSection h2 {
+    margin-bottom: 18px;
+}
+
+.searchBox input {
+    width: 355px;
+    max-width: 65%;
+    padding: 13px 15px;
+    border: 1px solid #4c8edb;
+    border-radius: 7px;
+    font-size: 17px;
+}
+
+.searchBox button {
+    padding: 13px 22px;
+    margin-left: 7px;
+    border: 0;
+    border-radius: 6px;
+    background-color: #c92d32;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.searchHint {
+    color: #dddddd;
+    font-size: 14px;
+}
+
+#searchMessage {
+    margin: 15px 0;
+    color: #ff9a50;
+}
+
+.stats {
+    text-align: center;
+    font-size: 18px;
+    padding: 12px 0 25px;
+}
+
+.contentSection {
+    text-align: center;
+    padding-bottom: 45px;
+}
+
+.contentSection h2 {
+    font-size: 24px;
+    margin: 0 0 8px;
+}
+
+.sectionDescription {
+    color: #cccccc;
+    margin-bottom: 25px;
+}
+
+.mealGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 28px;
+    padding: 0 8px;
+}
+
+.innerStyle {
+    text-align: center;
+    color: #ff681e;
+    font-size: 18px;
+    margin: 5px;
+}
+
+.innerStyle img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.innerStyle p {
+    margin: 7px 0 0;
+}
+
+.loadingText {
+    grid-column: 1 / -1;
+    color: #dddddd;
+}
+
+.ingredientGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 30px;
+}
+
+.ingredientItem {
+    text-align: center;
+    cursor: pointer;
+    color: #ff681e;
+    font-size: 18px;
+}
+
+.ingredientItem img {
+    width: 210px;
+    height: 190px;
+    object-fit: contain;
+}
+
+.ingredientItem:hover p {
+    color: white;
+}
+
+footer {
+    text-align: center;
+    border-top: 2px solid #eeeeee;
+    padding: 20px;
+    color: #cccccc;
+}
+
+footer a {
+    color: #ff681e;
+}
+
+@media screen and (max-width: 850px) {
+    .navContainer {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .navRight {
+        gap: 8px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .welcome {
+        padding: 35px 0;
+    }
+
+    .sideFood {
+        display: none;
+    }
+
+    .mealGrid, .ingredientGrid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .mainContainer {
+        width: 92%;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .logo {
+        font-size: 27px;
+    }
+
+    .navRight input {
+        width: 115px;
+    }
+
+    .welcome h1 {
+        font-size: 30px;
+    }
+
+    .welcome p {
+        font-size: 15px;
+    }
+
+    .mealGrid, .ingredientGrid {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .ingredientItem img {
+        width: 140px;
+        height: 140px;
+    }
+
+    .searchBox input {
+        max-width: 100%;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .searchBox button {
+        margin-left: 0;
+    }
+
+    .stats {
+        font-size: 14px;
+        line-height: 2;
+    }
+}

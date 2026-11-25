@@ -1,0 +1,99 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal Finder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="topBar">
+        <div class="navContainer">
+            <a class="logo" href="index.html">
+                <span class="logoIcon">♨</span>
+                <span>Meal <span class="orange">Finder</span></span>
+            </a>
+
+            <div class="navRight">
+                <a class="homeButton" href="index.html">Home</a>
+                <a href="https://www.themealdb.com/api.php" target="_blank">API</a>
+                <input id="topSearchBox" type="text" placeholder="Search">
+                <button class="topSearchButton" onclick="searchFromTop()">Search</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="mainContainer">
+
+        <section class="welcome">
+            <div class="sideFood">🍲</div>
+            <div class="welcomeText">
+                <h1>Welcome to Meal Finder</h1>
+                <p class="tagline">Discover delicious meals from around the world.</p>
+            </div>
+            <div class="sideFood">🍲</div>
+        </section>
+
+        <hr>
+
+        <section class="searchSection" id="searchSection">
+            <h2>Find Your Favourite Meal</h2>
+            <div class="searchBox">
+                <input id="mealBox" type="text" placeholder="Search meals (e.g. beef, chicken, Cake)">
+                <button onclick="connect()">Search</button>
+            </div>
+            <p class="searchHint">Enter a meal name and click Search to see matching recipes. (Showing maximum first 5 meals)</p>
+            <div id="searchMessage"></div>
+            <div id="searchArea" class="mealGrid"></div>
+        </section>
+
+        <div class="stats">
+            🍄 <b>Meal Database:</b> Explore recipes
+            &nbsp; 🥩 <b>Ingredients:</b> Discover new flavours
+            &nbsp; 🖼️ <b>Meal Images:</b> From <a href="https://www.themealdb.com/" target="_blank" rel="noopener noreferrer">TheMealDB</a>
+        </div>
+
+        <hr>
+
+        <section class="contentSection">
+            <h2>Latest Meals</h2>
+            <p class="sectionDescription">Discover meals from around the world</p>
+            <div id="showArea" class="mealGrid">
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="contentSection">
+            <h2>Popular Ingredients</h2>
+            <p class="sectionDescription">Choose an ingredient to find meals</p>
+            <div class="ingredientGrid">
+                <div class="ingredientItem" onclick="searchIngredient('chicken')">
+                    <img src="https://www.themealdb.com/images/ingredients/chicken.png" alt="Chicken">
+                    <p>Chicken</p>
+                </div>
+                <div class="ingredientItem" onclick="searchIngredient('salmon')">
+                    <img src="https://www.themealdb.com/images/ingredients/salmon.png" alt="Salmon">
+                    <p>Salmon</p>
+                </div>
+                <div class="ingredientItem" onclick="searchIngredient('beef')">
+                    <img src="https://www.themealdb.com/images/ingredients/beef.png" alt="Beef">
+                    <p>Beef</p>
+                </div>
+                <div class="ingredientItem" onclick="searchIngredient('pork')">
+                    <img src="https://www.themealdb.com/images/ingredients/pork.png" alt="Pork">
+                    <p>Pork</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+             <p>©️ 2026 Meal Finder. All rights reserved.</p>
+            <p>Created By Md. Asifuzzaman</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
